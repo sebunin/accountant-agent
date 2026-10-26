@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 DEFAULT_DB = Path("~/.hermes/skills/rameva/rameva.db").expanduser()
-OWN_ACCOUNT = "40702810602000129531"   # расчётный счёт ООО "РАМЕВА"
+OWN_ACCOUNT = "[ACCOUNT]"   # расчётный счёт ООО "РАМЕВА"
 
 
 # ---------------------------------------------------------------------------

@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 DEFAULT_DB = Path("~/.hermes/skills/rameva/rameva.db").expanduser()
-OWN_INN = "4824091910"
+OWN_INN = "[INN]"
 
 FUND_KEYWORDS   = ["казначейство", "уфк", "ифнс", "фнс", "осфр", "офр", "пфр",
                    "фсс", "фонд социального", "пенсионного"]

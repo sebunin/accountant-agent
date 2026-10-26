@@ -6,14 +6,14 @@
 company:
   name_full: 'Общество с ограниченной ответственностью "Рамева"'
   name_short: 'ООО "РАМЕВА"'
-  inn: "4824091910"
-  kpp: "482401001"
-  ogrn: "1174827007970"
+  inn: "[INN]"
+  kpp: "[KPP]"
+  ogrn: "[OGRN]"
   registered: "21.04.2017"
-  address: "398027, Липецкая обл., г. Липецк, ул. Свиридова И.В., д. 1а, кв. 114"
+  address: "[ADDRESS]"
 
 codes:
-  oktmo: "42701000"
+  oktmo: "[OKTMO]"
   okato: "42401368000"
   okpo: "15417898"
   okopf: "12300"
@@ -28,9 +28,9 @@ codes:
     - {code: "63.12",   name: "Деятельность web-порталов"}
 
 bank:
-  account: "40702810602000129531"
+  account: "[ACCOUNT]"
   name: 'ЯРОСЛАВСКИЙ Ф-Л ПАО "ПРОМСВЯЗЬБАНК" г. Ярославль'
-  bik: "047888760"
+  bik: "[BIK]"
   corr_account: "30101810300000000760"
 
 taxation:
@@ -43,38 +43,38 @@ taxation:
   vat: false
 
 sfr:
-  reg_number: "1027379435"
+  reg_number: "[SFR_REG]"
   sfr_name: "Отделение СФР по Липецкой области"
   ns_rate: 0.2
   ns_recipient: "УФК по Липецкой области (ОСФР по Липецкой области)"
   ns_recipient_inn: "4826004782"
-  ns_recipient_account: "03100643000000014600"
-  ns_recipient_bik: "042202112"
-  ns_kbk: "79710212000061000160"
-  ns_oktmo: "42701000"
+  ns_recipient_account: "[SFR_ACCOUNT]"
+  ns_recipient_bik: "[SFR_BIK]"
+  ns_kbk: "[SFR_KBK]"
+  ns_oktmo: "[OKTMO]"
 
 director:
-  name: "Бунин Сергей Юрьевич"
+  name: "[DIRECTOR]"
   inn: "482505236204"
   position: "Генеральный директор"
   also_accountant: true
   also_founder: true
   founder_share_pct: 100
-  rate: 0.25
-  salary_full_rate: 27500
-  salary_gross: 6875.00         # 27500 × 0.25, верифицировано по расчётному листку
+  rate: [RATE]
+  salary_full_rate: [SALARY_FULL]
+  salary_gross: [SALARY_ACTUAL].00         # [SALARY_FULL] × [RATE], верифицировано по расчётному листку
   ndfl_rate: 13
-  account: "40817810335004573692"
-  bank_bik: "044206604"
+  account: "[DIR_ACCOUNT]"
+  bank_bik: "[DIR_BIK]"
 
 alimony:
   active: true
   rate: 25                      # % от дохода после НДФЛ, верифицировано
   basis: "Судебный приказ № 2-3733/2018 от 19.10.2018"
-  beneficiary: "Бунина Ксения Сергеевна"
-  recipient_name: "Бунина Ольга Юрьевна"
-  recipient_account: "40817810935001083514"
-  recipient_bank_bik: "044206604"
+  beneficiary: "[ALIMONY_BENEFICIARY]"
+  recipient_name: "[ALIMONY_RECIPIENT]"
+  recipient_account: "[ALIMONY_ACCOUNT]"
+  recipient_bank_bik: "[DIR_BIK]"
 
 payroll_schedule:
   salary_day: 1                 # окончательный расчёт — 1-е число следующего месяца
@@ -85,9 +85,9 @@ payroll_schedule:
 enp:
   recipient: "Казначейство России (ФНС России)"
   recipient_inn: "7727406020"
-  recipient_account: "03100643000000018500"
-  recipient_bik: "017003983"
-  kbk: "18201061201010000510"
+  recipient_account: "[ENP_ACCOUNT]"
+  recipient_bik: "[ENP_BIK]"
+  kbk: "[ENP_KBK]"
 
 diadok:
   active: true

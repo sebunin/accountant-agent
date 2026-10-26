@@ -33,13 +33,13 @@ def similarity(a: str, b: str) -> float:
 
 # ── Известные роли физлиц ────────────────────────────────────────────────────
 KNOWN_PERSONS = [{
-    "canonical": "Бунин Сергей Юрьевич",
+    "canonical": "[DIRECTOR]",
     "inn": "482505236204",
     "roles": [
-        {"role": "employee",    "variants": ["БУНИН СЕРГЕЙ ЮРЬЕВИЧ", "Бунин Сергей Юрьевич"], "accounts": ["70"]},
-        {"role": "founder",     "variants": ["Бунин Сергей Юрьевич"],                          "accounts": ["80", "84"]},
-        {"role": "lender",      "variants": ["Бунин Сергей Юрьевич", "БУНИН СЕРГЕЙ ЮРЬЕВИЧ"],  "accounts": ["66", "67"]},
-        {"role": "accountable", "variants": ["Бунин Сергей Юрьевич"],                          "accounts": ["71"]},
+        {"role": "employee",    "variants": ["БУНИН СЕРГЕЙ ЮРЬЕВИЧ", "[DIRECTOR]"], "accounts": ["70"]},
+        {"role": "founder",     "variants": ["[DIRECTOR]"],                          "accounts": ["80", "84"]},
+        {"role": "lender",      "variants": ["[DIRECTOR]", "БУНИН СЕРГЕЙ ЮРЬЕВИЧ"],  "accounts": ["66", "67"]},
+        {"role": "accountable", "variants": ["[DIRECTOR]"],                          "accounts": ["71"]},
     ]
 }]
 
@@ -213,7 +213,7 @@ def cmd_bank_vs_docs(db_path: Path, period: str = None):
 def cmd_loans(db_path: Path):
     con = db(db_path)
     print("\n" + "="*60)
-    print("  ЗАЙМЫ ОТ УЧРЕДИТЕЛЯ  |  Бунин С.Ю.")
+    print("  ЗАЙМЫ ОТ УЧРЕДИТЕЛЯ  |  [DIRECTOR_SHORT]")
     print("="*60)
 
     # Из ОСВ

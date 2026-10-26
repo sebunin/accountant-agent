@@ -54,7 +54,7 @@ class Rule:
     code_nazn: Optional[str] = None      # КодНазПлатежа (1=зп, 2=алименты)
     purpose_kw: Optional[list] = None    # ключевые слова в назначении (ANY)
     counterparty_inn: Optional[str] = None
-    own_inn: str = "4824091910"          # ИНН ООО "РАМЕВА"
+    own_inn: str = "[INN]"          # ИНН ООО "РАМЕВА"
 
     def matches(self, tx: dict) -> bool:
         if self.direction and tx["direction"] != self.direction:

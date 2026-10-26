@@ -41,7 +41,7 @@ DEFAULT_TASKS = [
         "due_date": "2026-10-25",
         "created": "2026-10-13",
         "updated": "2026-10-13",
-        "details": {"form": "ЕФС-1", "period": "2026-H1", "correction": "001", "amount": 55.00, "base": 27500},
+        "details": {"form": "ЕФС-1", "period": "2026-H1", "correction": "001", "amount": 55.00, "base": [SALARY_FULL]},
         "blockers": [],
         "next_action": "Подготовка корректировки после корр. № 002"
     },
