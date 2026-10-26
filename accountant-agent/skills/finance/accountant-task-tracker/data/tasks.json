@@ -1,0 +1,227 @@
+[
+  {
+    "id": "tsk_20261013_001",
+    "title": "Корр. ЕФС-1 № 002 (20 625 / 41.25)",
+    "type": "reporting",
+    "status": "in_progress",
+    "priority": "high",
+    "due_date": "2026-10-25",
+    "created": "2026-10-13",
+    "updated": "2026-10-19",
+    "details": {
+      "form": "ЕФС-1",
+      "period": "2026-Q2",
+      "correction": "002",
+      "amount": 41.25,
+      "base": 20625
+    },
+    "blockers": [],
+    "next_action": "Сверка с требованием № 63971, подготовка XML"
+  },
+  {
+    "id": "tsk_20261013_002",
+    "title": "Корр. ЕФС-1 № 001 за полугодие (27 500 / 55.00)",
+    "type": "reporting",
+    "status": "open",
+    "priority": "high",
+    "due_date": "2026-10-25",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "form": "ЕФС-1",
+      "period": "2026-H1",
+      "correction": "001",
+      "amount": 55.0,
+      "base": 27500
+    },
+    "blockers": [],
+    "next_action": "Подготовка корректировки после корр. № 002"
+  },
+  {
+    "id": "tsk_20261013_003",
+    "title": "Уведомление 34/02 + аванс УСН (~2 431 ₽)",
+    "type": "reporting",
+    "status": "open",
+    "priority": "high",
+    "due_date": "2026-10-25",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "form": "34/02",
+      "period": "2026-Q2",
+      "amount": 2431
+    },
+    "blockers": [],
+    "next_action": "Расчёт аванса, заполнение уведомления"
+  },
+  {
+    "id": "tsk_20261013_004",
+    "title": "Взносы за апрель 8 127,90 + пени с 29.07",
+    "type": "payment",
+    "status": "open",
+    "priority": "critical",
+    "due_date": "2026-10-25",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "period": "2026-04",
+      "base": 27093,
+      "rate": 0.3,
+      "amount": 8127.9,
+      "penalty_from": "2026-07-29"
+    },
+    "blockers": [],
+    "next_action": "Расчёт пени, формирование платёжки, ходатайство ст. 114"
+  },
+  {
+    "id": "tsk_20261013_005",
+    "title": "Штрафное ходатайство ст. 119/114 НК",
+    "type": "response",
+    "status": "open",
+    "priority": "high",
+    "due_date": "2026-11-01",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "article": "119/114 НК",
+      "reason": "просрочка РСВ за II квартал"
+    },
+    "blockers": [
+      "tsk_20261013_001"
+    ],
+    "next_action": "Собрать доказательства устранения причин, написать ходатайство"
+  },
+  {
+    "id": "tsk_20261013_006",
+    "title": "Проверка снятия блокировки № 105718359 (Банкинформ)",
+    "type": "monitoring",
+    "status": "in_progress",
+    "priority": "critical",
+    "due_date": "2026-10-14",
+    "created": "2026-10-13",
+    "updated": "2026-10-14",
+    "details": {
+      "block_id": "105718359",
+      "grund": "02",
+      "report_accepted": "2026-10-13T03:55"
+    },
+    "blockers": [],
+    "next_action": "Запрос к Банкинформу 14.10, если не снята — обращение в ИФНС"
+  },
+  {
+    "id": "tsk_20261013_007",
+    "title": "Ежемесячная сверка выписки ПСБ / классификация",
+    "type": "reconciliation",
+    "status": "recurring",
+    "priority": "medium",
+    "due_date": "monthly",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "recurring": true,
+      "period": "monthly",
+      "script": "parse_bank.py + classify.py"
+    },
+    "blockers": [],
+    "next_action": "Загрузить выписку за прошедший месяц, классифицировать >1000₽ с подтверждением"
+  },
+  {
+    "id": "tsk_20261013_008",
+    "title": "Параллельный расчёт АУСН (8% × доходы) для контроля",
+    "type": "monitoring",
+    "status": "recurring",
+    "priority": "medium",
+    "due_date": "monthly",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "recurring": true,
+      "period": "monthly",
+      "script": "tax_calc.py"
+    },
+    "blockers": [],
+    "next_action": "Запустить tax_calc.py после закрытия месяца, сравнить с суммой ФНС (15-е)"
+  },
+  {
+    "id": "tsk_20261013_009",
+    "title": "Годовая УСН-декларация (34) за янв–апр 2026",
+    "type": "reporting",
+    "status": "open",
+    "priority": "medium",
+    "due_date": "2027-03-25",
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "details": {
+      "form": "34",
+      "period": "2026-01-04",
+      "transition": true
+    },
+    "blockers": [],
+    "next_action": "Подготовить после закрытия 2026 года, до 25.03.2027"
+  },
+  {
+    "id": "tsk_20261019_010",
+    "title": "Тестовая задача",
+    "type": "admin",
+    "status": "open",
+    "priority": "low",
+    "due_date": "2026-10-30",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "details": {},
+    "blockers": [],
+    "next_action": ""
+  },
+  {
+    "id": "tsk_20261019_011",
+    "title": "Требование ФНС № 82973 (UID 18204800262800778230): взносы 4 376,40 + пени 499,63 = 4 876,03, срок 05.11.2026",
+    "type": "response",
+    "status": "open",
+    "priority": "critical",
+    "due_date": "2026-11-05",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "details": {},
+    "blockers": [],
+    "next_action": ""
+  },
+  {
+    "id": "tsk_20261019_012",
+    "title": "Новые реквизиты ОСФР Липецк с 22.02.2026: БИК 042202112, ЕКС 40102810945370000112, КБК 79710212000061000160, ежемесячно 246,58 до 15-го",
+    "type": "payment",
+    "status": "open",
+    "priority": "high",
+    "due_date": "2026-11-15",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "details": {},
+    "blockers": [],
+    "next_action": ""
+  },
+  {
+    "id": "tsk_20261019_013",
+    "title": "Банк 16.10: неверный расчёт удержанного НДФЛ с аванса — проверить платёжку, уточнить у банка, возможна корректировка",
+    "type": "payment",
+    "status": "open",
+    "priority": "critical",
+    "due_date": "2026-10-25",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "details": {},
+    "blockers": [],
+    "next_action": ""
+  },
+  {
+    "id": "tsk_20261021_014",
+    "title": "АУСН налог за сентябрь 2026: 1 000 руб (уведомление ЛК АУСН от 16.10, сальдо ЕНС -4 884)",
+    "type": "payment",
+    "status": "open",
+    "priority": "critical",
+    "due_date": "2026-10-26",
+    "created": "2026-10-21",
+    "updated": "2026-10-21",
+    "details": {},
+    "blockers": [],
+    "next_action": ""
+  }
+]

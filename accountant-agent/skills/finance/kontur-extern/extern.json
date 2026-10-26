@@ -1,0 +1,23 @@
+{
+  "test_mode": true,
+  "credentials": {
+    "api_key": "",
+    "client_id": ""
+  },
+  "tokens": {
+    "access_token": "",
+    "refresh_token": "",
+    "expires_at": ""
+  },
+  "account": {
+    "account_id": "",
+    "inn": "",
+    "kpp": "",
+    "org_name": ""
+  },
+  "settings": {
+    "deadline_warning_days": 5,
+    "demand_critical_days": 2,
+    "ens_alert_on_negative": true
+  }
+}

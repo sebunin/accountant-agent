@@ -1,0 +1,101 @@
+# =============================================================================
+# Конфигурация субагента-бухгалтера ООО "РАМЕВА"
+# Версия: 1.1 (19.05.2026) — все данные верифицированы по ЕГРЮЛ и выписке ПСБ
+# =============================================================================
+
+company:
+  name_full: 'Общество с ограниченной ответственностью "Рамева"'
+  name_short: 'ООО "РАМЕВА"'
+  inn: "4824091910"
+  kpp: "482401001"
+  ogrn: "1174827007970"
+  registered: "21.04.2017"
+  address: "398027, Липецкая обл., г. Липецк, ул. Свиридова И.В., д. 1а, кв. 114"
+
+codes:
+  oktmo: "42701000"
+  okato: "42401368000"
+  okpo: "15417898"
+  okopf: "12300"
+  okfs: "16"
+  okved_main: "63.11"
+  okved_additional:
+    - {code: "47.91.2", name: "Торговля розничная через интернет"}
+    - {code: "62.01",   name: "Разработка компьютерного ПО"}
+    - {code: "62.02",   name: "Консультации в области компьютерных технологий"}
+    - {code: "62.03",   name: "Управление компьютерным оборудованием", added: "17.01.2026"}
+    - {code: "62.09",   name: "Деятельность, связанная с ИТ, прочая"}
+    - {code: "63.12",   name: "Деятельность web-порталов"}
+
+bank:
+  account: "40702810602000129531"
+  name: 'ЯРОСЛАВСКИЙ Ф-Л ПАО "ПРОМСВЯЗЬБАНК" г. Ярославль'
+  bik: "047888760"
+  corr_account: "30101810300000000760"
+
+taxation:
+  current_mode: "АУСН"
+  ausn_start_date: "2026-05-01"
+  ausn_rate: 8
+  ausn_min_rate: 3
+  previous_mode: "УСН доходы"
+  previous_rate: 6
+  vat: false
+
+sfr:
+  reg_number: "1027379435"
+  sfr_name: "Отделение СФР по Липецкой области"
+  ns_rate: 0.2
+  ns_recipient: "УФК по Липецкой области (ОСФР по Липецкой области)"
+  ns_recipient_inn: "4826004782"
+  ns_recipient_account: "03100643000000014600"
+  ns_recipient_bik: "042202112"
+  ns_kbk: "79710212000061000160"
+  ns_oktmo: "42701000"
+
+director:
+  name: "Бунин Сергей Юрьевич"
+  inn: "482505236204"
+  position: "Генеральный директор"
+  also_accountant: true
+  also_founder: true
+  founder_share_pct: 100
+  rate: 0.25
+  salary_full_rate: 27500
+  salary_gross: 6875.00         # 27500 × 0.25, верифицировано по расчётному листку
+  ndfl_rate: 13
+  account: "40817810335004573692"
+  bank_bik: "044206604"
+
+alimony:
+  active: true
+  rate: 25                      # % от дохода после НДФЛ, верифицировано
+  basis: "Судебный приказ № 2-3733/2018 от 19.10.2018"
+  beneficiary: "Бунина Ксения Сергеевна"
+  recipient_name: "Бунина Ольга Юрьевна"
+  recipient_account: "40817810935001083514"
+  recipient_bank_bik: "044206604"
+
+payroll_schedule:
+  salary_day: 1                 # окончательный расчёт — 1-е число следующего месяца
+  advance_day: 16               # аванс — 16-е число текущего месяца
+  sfr_ns_deadline: 15
+  enp_deadline: 28
+
+enp:
+  recipient: "Казначейство России (ФНС России)"
+  recipient_inn: "7727406020"
+  recipient_account: "03100643000000018500"
+  recipient_bik: "017003983"
+  kbk: "18201061201010000510"
+
+diadok:
+  active: true
+  api_key: null
+  org_id: null
+
+agent:
+  db_path: "~/.hermes/skills/rameva/rameva.db"
+  timezone: "Europe/Moscow"
+  alerts_days_before: 3
+  telegram_notify: true
