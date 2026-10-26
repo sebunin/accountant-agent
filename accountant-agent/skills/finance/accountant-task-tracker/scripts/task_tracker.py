@@ -34,7 +34,7 @@ DEFAULT_TASKS = [
     },
     {
         "id": "tsk_20261013_002",
-        "title": "Корр. ЕФС-1 № 001 за полугодие (27 500 / 55.00)",
+        "title": "Корр. ЕФС-1 № 001 за полугодие ([SALARY_FULL_WITH_SPACE] / 55.00)",
         "type": "reporting",
         "status": "open",
         "priority": "high",

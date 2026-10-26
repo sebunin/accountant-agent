@@ -163,7 +163,7 @@ def payment_calendar(period: str, db_path: Path) -> list[dict]:
     payments.append({
         "date": f"{year}-{month:02d}-16",
         "type": "Алименты (с аванса)",
-        "recipient": "Бунина О.Ю.",
+        "recipient": "[ALIMONY_RECIPIENT_SHORT]",
         "amount": adv_alimony,
         "details": f"[ALIMONY_RATE] от {adv_net} (аванс после НДФЛ)",
     })
@@ -185,7 +185,7 @@ def payment_calendar(period: str, db_path: Path) -> list[dict]:
     payments.append({
         "date": f"{next_year}-{next_month:02d}-01",
         "type": "Алименты (с зарплаты)",
-        "recipient": "Бунина О.Ю.",
+        "recipient": "[ALIMONY_RECIPIENT_SHORT]",
         "amount": sal_alimony,
         "details": f"[ALIMONY_RATE] от {sal_net} (вторая половина после НДФЛ)",
     })
